@@ -1,6 +1,6 @@
 # aria2_project_builder.ps1
 # 自动化构建 Aria2 下载项目
-# author: Alerm | 功能: 一键构建完整项目环境
+# author: Alerm | 功能: 一键构建完整项目环境（包括脚本、配置文件、任务文件）
 
 $ErrorActionPreference = "Stop"
 $scriptDir = $PSScriptRoot

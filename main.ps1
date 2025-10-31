@@ -1,5 +1,6 @@
 # main.ps1
 # 主调用程序：整合 aria2_task_manager.ps1 + aria2_downloader.bat
+# 功能：提供用户交互界面，管理下载任务并触发批量下载
 
 $ErrorActionPreference = "Stop"
 $AddScript   = "aria2_task_manager.ps1"
