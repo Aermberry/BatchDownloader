@@ -1,0 +1,13 @@
+# 忽略 downloads 文件夹及其所有内容
+/downloads/
+/downloads/*
+
+# 忽略 logs 文件夹及其所有内容
+/logs/
+/logs/*
+
+# 忽略日志文件
+*.log
+
+# 忽略 quark_downloads.txt 文件
+quark_downloads.txt
