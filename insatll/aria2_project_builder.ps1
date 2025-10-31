@@ -1,6 +1,6 @@
-# setup_quark_downloader.ps1
-# 自动化部署 Quark 网盘批量下载器
-# 作者: Grok | 功能: 一键构建完整环境
+# aria2_project_builder.ps1
+# 自动化构建 Aria2 下载项目
+# author: Alerm | 功能: 一键构建完整项目环境
 
 $ErrorActionPreference = "Stop"
 $scriptDir = $PSScriptRoot
@@ -9,7 +9,7 @@ if (-not $scriptDir) { $scriptDir = $PWD.Path }
 # ============ 定义文件内容 ============
 
 $mainPs1 = @'
-# QuarkDownloader.ps1
+# main.ps1
 # 主调用程序：整合 aria2_task_manager.ps1 + aria2_downloader.bat
 
 $ErrorActionPreference = "Stop"
@@ -21,7 +21,7 @@ function Show-Menu {
     Clear-Host
     Write-Host "`n"
     Write-Host " =========================================" -ForegroundColor Cyan
-    Write-Host "     Quark 网盘批量下载器 - 主控台" -ForegroundColor Cyan
+    Write-Host "     Aria2 批量下载器 - 主控台" -ForegroundColor Cyan
     Write-Host " =========================================" -ForegroundColor Cyan
     Write-Host ""
     Write-Host " [1] 添加下载任务（粘贴 aria2c 命令）" -ForegroundColor White

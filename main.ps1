@@ -1,4 +1,4 @@
-# QuarkDownloader.ps1
+# main.ps1
 # 主调用程序：整合 aria2_task_manager.ps1 + aria2_downloader.bat
 
 $ErrorActionPreference = "Stop"
