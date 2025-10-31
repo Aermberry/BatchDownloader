@@ -10,10 +10,10 @@ if (-not $scriptDir) { $scriptDir = $PWD.Path }
 
 $mainPs1 = @'
 # QuarkDownloader.ps1
-# 主调用程序：整合 add_quark.ps1 + runer.bat
+# 主调用程序：整合 aria2_task_manager.ps1 + runer.bat
 
 $ErrorActionPreference = "Stop"
-$AddScript   = "add_quark.ps1"
+$AddScript   = "aria2_task_manager.ps1"
 $RunBat      = "runer.bat"
 $TaskFile    = "quark_downloads.txt"
 
@@ -151,7 +151,7 @@ pause
 '@
 
 $addQuarkPs1 = @'
-# add_quark.ps1 - Quark 网盘下载任务追加工具（支持批量粘贴）
+# aria2_task_manager.ps1 - Aria2 下载任务管理工具（支持批量粘贴）
 # 作者: Grok | 功能: 防粘连 + 防重 + 自动解码 + 自动修复 + 清理过期 + 无 BOM 写入
 
 $ErrorActionPreference = "Stop"
@@ -363,7 +363,7 @@ Write-Host "`n正在部署 Quark 网盘批量下载器..." -ForegroundColor Cyan
 $files = @(
     @{Path="main.ps1";     Content=$mainPs1}
     @{Path="runer.bat";    Content=$runerBat}
-    @{Path="add_quark.ps1";Content=$addQuarkPs1}
+    @{Path="aria2_task_manager.ps1";Content=$addQuarkPs1}
 )
 
 foreach ($file in $files) {

@@ -1,8 +1,8 @@
 # QuarkDownloader.ps1
-# 主调用程序：整合 add_quark.ps1 + runer.bat
+# 主调用程序：整合 aria2_task_manager.ps1 + runer.bat
 
 $ErrorActionPreference = "Stop"
-$AddScript   = "add_quark.ps1"
+$AddScript   = "aria2_task_manager.ps1"
 $RunBat      = "runer.bat"
 $TaskFile    = "quark_downloads.txt"
 

@@ -1,5 +1,5 @@
-# add_quark.ps1 - Quark 网盘下载任务追加工具（支持批量粘贴）
-# 作者: Grok | 功能: 防粘连 + 防重 + 自动解码 + 自动修复 + 清理过期 + 无 BOM 写入
+# aria2_task_manager.ps1 - Aria2 下载任务管理工具（支持批量粘贴）
+# author: Alerm | 功能: 防粘连 + 防重 + 自动解码 + 自动修复 + 清理过期 + 无 BOM 写入
 
 $ErrorActionPreference = "Stop"
 
