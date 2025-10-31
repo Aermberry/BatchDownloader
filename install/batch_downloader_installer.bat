@@ -20,7 +20,7 @@ if %errorlevel% equ 0 (
 %PS% %PS_ARGS% -Command "if ((Get-ExecutionPolicy) -eq 'Restricted') { Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force }"
 
 :: 下载并执行脚本
-%PS% %PS_ARGS% -Command "IEX (Invoke-WebRequest -Uri 'https://github.com/Aermberry/BatchDownloader/blob/main/install/aria2_project_builder.ps1' -UseBasicParsing).Content"
+%PS% %PS_ARGS% -Command "IEX (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Aermberry/BatchDownloader/refs/heads/main/install/aria2_project_builder.ps1' -UseBasicParsing).Content"
 
 echo.
 echo 部署完成！正在启动主程序...
