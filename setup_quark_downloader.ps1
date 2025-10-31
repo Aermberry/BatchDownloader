@@ -10,12 +10,12 @@ if (-not $scriptDir) { $scriptDir = $PWD.Path }
 
 $mainPs1 = @'
 # QuarkDownloader.ps1
-# 主调用程序：整合 aria2_task_manager.ps1 + runer.bat
+# 主调用程序：整合 aria2_task_manager.ps1 + aria2_downloader.bat
 
 $ErrorActionPreference = "Stop"
 $AddScript   = "aria2_task_manager.ps1"
-$RunBat      = "runer.bat"
-$TaskFile    = "quark_downloads.txt"
+$RunBat      = "aria2_downloader.bat"
+$TaskFile    = "aria2_download_tasks.txt"
 
 function Show-Menu {
     Clear-Host
@@ -110,7 +110,7 @@ chcp 65001 >nul 2>&1
 :: ========================================
 
 :: 输入文件
-set "INPUT_FILE=quark_downloads.txt"
+set "INPUT_FILE=aria2_download_tasks.txt"
 set "MAX_JOBS=5"
 set "SPLIT=16"
 set "CONN_PER_SERVER=8"
@@ -159,7 +159,7 @@ $ErrorActionPreference = "Stop"
 # 自动定位脚本目录
 $scriptDir = $PSScriptRoot
 if (-not $scriptDir) { $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path }
-$inputFile = Join-Path $scriptDir "quark_downloads.txt"
+$inputFile = Join-Path $scriptDir "aria2_download_tasks.txt"
 
 # ============ 安全写入 UTF-8 无 BOM ============
 function Write-Utf8NoBom {
@@ -362,7 +362,7 @@ Write-Host "`n正在部署 Quark 网盘批量下载器..." -ForegroundColor Cyan
 
 $files = @(
     @{Path="main.ps1";     Content=$mainPs1}
-    @{Path="runer.bat";    Content=$runerBat}
+    @{Path="aria2_downloader.bat";    Content=$runerBat}
     @{Path="aria2_task_manager.ps1";Content=$addQuarkPs1}
 )
 
@@ -386,10 +386,10 @@ foreach ($file in $files) {
 }
 
 # 创建空任务文件
-$taskFile = Join-Path $scriptDir "quark_downloads.txt"
+$taskFile = Join-Path $scriptDir "aria2_download_tasks.txt"
 if (-not (Test-Path $taskFile)) {
     Write-Utf8NoBom -Path $taskFile -Content ""
-    Write-Host "创建任务文件: quark_downloads.txt" -ForegroundColor Green
+    Write-Host "创建任务文件: aria2_download_tasks.txt" -ForegroundColor Green
 }
 
 # ============ 完成提示 ============

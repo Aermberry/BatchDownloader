@@ -1,10 +1,10 @@
 # QuarkDownloader.ps1
-# 主调用程序：整合 aria2_task_manager.ps1 + runer.bat
+# 主调用程序：整合 aria2_task_manager.ps1 + aria2_downloader.bat
 
 $ErrorActionPreference = "Stop"
 $AddScript   = "aria2_task_manager.ps1"
-$RunBat      = "runer.bat"
-$TaskFile    = "quark_downloads.txt"
+$RunBat      = "aria2_downloader.bat"
+$TaskFile    = "aria2_download_tasks.txt"
 
 function Show-Menu {
     Clear-Host

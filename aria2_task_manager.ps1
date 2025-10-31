@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 # 自动定位脚本目录
 $scriptDir = $PSScriptRoot
 if (-not $scriptDir) { $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path }
-$inputFile = Join-Path $scriptDir "quark_downloads.txt"
+$inputFile = Join-Path $scriptDir "aria2_download_tasks.txt"
 
 # ============ 安全写入 UTF-8 无 BOM ============
 function Write-Utf8NoBom {

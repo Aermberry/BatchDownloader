@@ -9,5 +9,5 @@
 # 忽略日志文件
 *.log
 
-# 忽略 quark_downloads.txt 文件
-quark_downloads.txt
+# 忽略 aria2_download_tasks.txt 文件
+aria2_download_tasks.txt

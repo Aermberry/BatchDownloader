@@ -7,7 +7,7 @@ chcp 65001 >nul 2>&1
 :: ========================================
 
 :: 输入文件
-set "INPUT_FILE=quark_downloads.txt"
+set "INPUT_FILE=aria2_download_tasks.txt"
 set "MAX_JOBS=5"
 set "SPLIT=16"
 set "CONN_PER_SERVER=8"
