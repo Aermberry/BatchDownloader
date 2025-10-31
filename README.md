@@ -58,7 +58,3 @@ aria2c "https://example.com/video.mp4" \
 - 任务文件为空：先执行菜单 `[1] 添加下载任务`。
 - 链接过期导致下载失败：重新生成链接；任务管理器会自动清理过期条目。
 - 执行策略受限：在 PowerShell 执行 `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force`。
-
-**鸣谢**
-- Author: Alerm
-- Thanks to Aria2 community.
