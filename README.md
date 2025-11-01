@@ -1,5 +1,7 @@
 # BatchDownloader（Aria2 项目构建器与批量下载器）
 
+中文 | [English](README_EN.md)
+
 **简介**
 - 基于 Aria2 的批量下载工具，提供任务管理、断点续传、日志记录等能力。
 - 核心组件：`main.ps1`（主控台）、`aria2_task_manager.ps1`（任务管理）、`aria2_downloader.bat`（批量下载）、`aria2_download_tasks.txt`（任务文件）。
