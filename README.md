@@ -40,14 +40,7 @@ iwr "https://github.com/Aermberry/BatchDownloader/releases/download/v1.0.0/batch
 5. 选择 `[3] 查看当前任务列表`，检查 `aria2_download_tasks.txt` 内容。
 6. 选择 `[4] 退出`。
 
-**示例：aria2c 命令**
-```bash
-aria2c "https://example.com/video.mp4" \
-  --out "video.mp4" \
-  --header "Referer: https://example.com" \
-  --header "User-Agent: Mozilla/5.0"
-```
-- 任务管理器会解析命令并写入 `aria2_download_tasks.txt`（UTF-8 无 BOM），自动防重、补空行分隔，并清理含 `Expires=` 的过期链接。
+> 任务管理器会解析命令并写入 `aria2_download_tasks.txt`（UTF-8 无 BOM），自动防重、补空行分隔，并清理含 `Expires=` 的过期链接。
 
 **下载与日志**
 - 下载目录：`downloads/`

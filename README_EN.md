@@ -40,14 +40,7 @@ iwr "https://github.com/Aermberry/BatchDownloader/releases/download/v1.0.0/batch
 5. Select `[3] View Current Task List` to check the contents of `aria2_download_tasks.txt`.
 6. Select `[4] Exit`.
 
-**Example: aria2c Command**
-```bash
-aria2c "https://example.com/video.mp4" \
-  --out "video.mp4" \
-  --header "Referer: https://example.com" \
-  --header "User-Agent: Mozilla/5.0"
-```
-- The task manager parses commands and writes them to `aria2_download_tasks.txt` (UTF-8 without BOM), automatically prevents duplicates, adds empty line separators, and cleans up expired links containing `Expires=`.
+> The task manager parses commands and writes them to `aria2_download_tasks.txt` (UTF-8 without BOM), automatically prevents duplicates, adds empty line separators, and cleans up expired links containing `Expires=`.
 
 **Downloads & Logs**
 - Download directory: `downloads/`
